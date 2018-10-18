@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!-- mysql -->
+    <!--<classPathEntry location="D:\work\mysql5.5\mysql-connector-java-5.1.8-bin.jar" />-->
+    <!-- postgresql -->
+    <classPathEntry location="D:\work\pgrsql\postgresql-42.1.4.jar" />
+
+    <context id="myTables" targetRuntime="MyBatis3">
+        <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+            <property name="searchString" value="Example$" />
+            <property name="replaceString" value="Criteria" />
+        </plugin>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+        <commentGenerator>
+            <property name="suppressDate" value="true" />
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+
+        <!-- mysql -->
+        <!-- 数据库链接URL、用户名、密码 -->
+        <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+                        <!--connectionURL="jdbc:mysql://192.168.73.135:3306/battcn"-->
+                        <!--userId="root"-->
+                        <!--password="root">-->
+        <!--</jdbcConnection>-->
+        <!-- postgresql -->
+        <jdbcConnection driverClass="org.postgresql.Driver"
+                        connectionURL="jdbc:postgresql://192.168.73.139:5432/taotao_db"
+                        userId="postgres"
+                        password="postgres">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+
+        <javaModelGenerator targetPackage="com.llnqdx.demo.model"
+                            targetProject="src/main/java">
+            <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
+            <property name="enableSubPackages" value="true" />
+            <!-- 从数据库返回的值被清理前后的空格 -->
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!--对应的mapper.xml文件 -->
+        <sqlMapGenerator targetPackage="com.llnqdx.demo.mapper"
+                         targetProject="src/main/java">
+            <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <!-- 对应的Mapper接口类文件 -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.llnqdx.demo.mapper" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!-- 列出要生成代码的所有表，这里配置的是生成Example文件 -->
+        <table schema="tu" tableName="tu_user_info"></table>
+
+    </context>
+</generatorConfiguration>
