@@ -1,10 +1,8 @@
 package com.llnqdx.demo.model.tu;
 
-import com.llnqdx.demo.base.BaseEntity;
-
 import java.io.Serializable;
 
-public class TuUserInfo extends BaseEntity implements Serializable {
+public class TuUserInfo implements Serializable {
     private String uuid;
 
     private String name;

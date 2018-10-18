@@ -1,11 +1,9 @@
 package com.llnqdx.demo.model.tu;
 
-import com.llnqdx.demo.base.BaseExample;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class TuUserInfoCriteria extends BaseExample {
+public class TuUserInfoCriteria {
     protected String orderByClause;
 
     protected boolean distinct;
