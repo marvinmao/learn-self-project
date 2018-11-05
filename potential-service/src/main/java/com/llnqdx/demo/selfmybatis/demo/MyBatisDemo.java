@@ -1,7 +1,7 @@
 package com.llnqdx.demo.selfmybatis.demo;
 
-import com.example.demo.mapper.TestMapper;
-import com.example.demo.mybatis.beans.Test;
+import com.llnqdx.demo.beans.Test;
+import com.llnqdx.demo.mapper.TestMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;

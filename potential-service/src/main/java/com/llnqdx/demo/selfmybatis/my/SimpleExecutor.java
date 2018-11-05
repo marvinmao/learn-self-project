@@ -1,7 +1,7 @@
 package com.llnqdx.demo.selfmybatis.my;
 
 
-import com.example.demo.mybatis.beans.Test;
+import com.llnqdx.demo.beans.Test;
 
 import java.sql.*;
 import java.util.concurrent.Executor;

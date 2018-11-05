@@ -1,7 +1,7 @@
 package com.llnqdx.demo.mq.ps;
 
 
-import com.example.demo.util.ConnectionUtil;
+import com.llnqdx.demo.util.ConnectionUtil;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 

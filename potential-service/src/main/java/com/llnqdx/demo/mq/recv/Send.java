@@ -1,6 +1,6 @@
 package com.llnqdx.demo.mq.recv;
 
-import com.example.demo.util.ConnectionUtil;
+import com.llnqdx.demo.util.ConnectionUtil;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 
