@@ -29,7 +29,7 @@
         <!--</jdbcConnection>-->
         <!-- postgresql -->
         <jdbcConnection driverClass="org.postgresql.Driver"
-                        connectionURL="jdbc:postgresql://192.168.73.139:5432/taotao_db"
+                        connectionURL="jdbc:postgresql://192.168.73.139:5432/postgres"
                         userId="postgres"
                         password="postgres">
         </jdbcConnection>
@@ -61,7 +61,7 @@
         </javaClientGenerator>
 
         <!-- 列出要生成代码的所有表，这里配置的是生成Example文件 -->
-        <table schema="tu" tableName="tu_user_info"></table>
+        <table schema="ui" tableName="user_info"></table>
 
     </context>
 </generatorConfiguration>
